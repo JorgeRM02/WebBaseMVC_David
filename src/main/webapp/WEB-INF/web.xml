@@ -19,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>EliminarDepartamentoServlet</display-name>
+    <servlet-name>EliminarDepartamentoServlet</servlet-name>
+    <servlet-class>controladores.EliminarDepartamentoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EliminarDepartamentoServlet</servlet-name>
+    <url-pattern>/eliminar</url-pattern>
+  </servlet-mapping>
 </web-app>
