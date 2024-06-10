@@ -1,5 +1,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="modelo.Departamento"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %> 
+
+
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -12,14 +15,9 @@
 <body>
 	<h1>Listado de departamentos</h1>
 	
-	<% ArrayList<Departamento> lista = 
-	     (ArrayList<Departamento>) request.getAttribute("listaDepartamentos");
-		if (lista==null) {
-			out.println("<h2>No hay datos</h2>");
-			return;
-		}
-	
-	%>
+		<c:if test="${listaDepartamentos==null or listaDepartamentos.size()==0}">
+			<h2> No se han encontrado datos de los departamentos</h2>
+		</c:if> 
 	
 	<table>
 	
@@ -31,17 +29,16 @@
 		</thead>
 		<tbody>
 		
-		<%
-			for (Departamento d: lista ){
-				out.println("<tr>");
-				out.println("<td>"+d.getCodDepto()+"</td>");
-				out.println("<td>"+d.getNombreDepto()+"</td>");
-				out.println("<td>"+d.getCiudad()+"</td>");
-				out.println("<td>"+d.getCodDirector()+"</td>");
-				out.println("</tr>");
-			}
-		%>
+
 		
+		<c:forEach var="d" items="${listaDepartamentos}">
+			<tr>
+				<td>${d.codDepto}</td>
+				<td>${d.nombreDepto}</td>
+				<td>${d.ciudad}</td>
+				<td>${d.codDirector}</td>
+			</tr>
+		</c:forEach>
 		
 		
 		
