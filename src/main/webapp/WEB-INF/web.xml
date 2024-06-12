@@ -29,4 +29,14 @@
     <servlet-name>EliminarDepartamentoServlet</servlet-name>
     <url-pattern>/eliminar</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MostrarEmpleadoServlet</display-name>
+    <servlet-name>MostrarEmpleadoServlet</servlet-name>
+    <servlet-class>controladores.MostrarEmpleadoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MostrarEmpleadoServlet</servlet-name>
+    <url-pattern>/empleado/mostrar</url-pattern>
+  </servlet-mapping>
 </web-app>

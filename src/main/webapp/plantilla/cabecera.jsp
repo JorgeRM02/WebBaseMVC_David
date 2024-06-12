@@ -27,6 +27,9 @@
 						<a href="${pageContext.servletContext.contextPath}/departamentos/mostrar">Mostrar</a>
 						<a href="${pageContext.servletContext.contextPath}/departamentos/insertar.jsp">Nuevo</a>
 					</li>
+					<li>Empleados
+						<a href="${pageContext.servletContext.contextPath}/empleado/mostrar">Mostrar</a>
+					</li>
 				</ul>
 			</nav>
 		</aside>

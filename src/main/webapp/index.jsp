@@ -15,6 +15,7 @@
 			<nav>
 				<ul>
 					<li><a href="departamentos/mostrar">Departamentos</a></li>
+					<li><a href="empleado/mostrar"Empleados</a></li>
 				</ul>
 			</nav>
 		</aside>
